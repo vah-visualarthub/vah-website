@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Products | VAH – Visual Art Hub</title>
+  <meta
+    name="description"
+    content="Explore personalized gifts from VAH – Visual Art Hub. Mugs, photo frames, t-shirts, magic mirrors, keychains & more."
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="brand-name">VAH – Visual Art Hub</h1>
+      <p class="tagline">Because every moment matters</p>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= FILTER BAR ================= -->
+  <section class="product-filters">
+    <div class="container">
+      <button class="filter-btn" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="mugs">Mugs</button>
+      <button class="filter-btn" data-filter="frames">Frames</button>
+      <button class="filter-btn" data-filter="tshirts">T-Shirts</button>
+      <button class="filter-btn" data-filter="magic-mirror">Magic Mirror</button>
+      <button class="filter-btn" data-filter="keychains">Keychains</button>
+    </div>
+  </section>
+
+  <!-- ================= PRODUCTS SECTION ================= -->
+  <section class="products">
+    <div class="container">
+      <h2>Our Personalized Gifts</h2>
+      <p>Thoughtfully crafted gifts to make your memories last.</p>
+
+      <div class="product-grid">
+
+        <!-- Product Cards -->
+        <article class="product-card" data-category="mugs">
+          <img src="assets/images/mugs.jpg" alt="Personalized photo mugs" />
+          <h3>Personalized Mugs</h3>
+          <p>High-quality photo mugs perfect for everyday memories.</p>
+          <button class="add-to-cart" data-product="Personalized Mugs">Add</button>
+        </article>
+
+        <article class="product-card" data-category="frames">
+          <img src="assets/images/frames.jpg" alt="Photo Frames" />
+          <h3>Photo Frames (8x12, 12x18)</h3>
+          <p>Elegant frames to showcase your most special moments.</p>
+          <button class="add-to-cart" data-product="Photo Frames">Add</button>
+        </article>
+
+        <article class="product-card" data-category="tshirts">
+          <img src="assets/images/tshirts.jpg" alt="Custom T-Shirts" />
+          <h3>Custom T-Shirts</h3>
+          <p>Wear your memories with personalized photo t-shirts.</p>
+          <button class="add-to-cart" data-product="Custom T-Shirts">Add</button>
+        </article>
+
+        <article class="product-card" data-category="magic-mirror">
+          <img src="assets/images/magic-mirror.jpg" alt="Magic Mirror" />
+          <h3>Magic Mirror</h3>
+          <p>A magical photo reveal that surprises and delights.</p>
+          <button class="add-to-cart" data-product="Magic Mirror">Add</button>
+        </article>
+
+        <article class="product-card" data-category="keychains">
+          <img src="assets/images/keychains.jpg" alt="Photo Keychains" />
+          <h3>Photo Keychains</h3>
+          <p>Carry your loved ones with you, everywhere.</p>
+          <button class="add-to-cart" data-product="Photo Keychains">Add</button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SELECTED ITEMS / WHATSAPP ORDER ================= -->
+  <section class="order-summary">
+    <div class="container">
+      <h2>Selected Items</h2>
+      <ul id="selected-items">
+        <li>No items selected yet.</li>
+      </ul>
+
+      <button id="whatsapp-order" disabled>
+        Order on WhatsApp
+      </button>
+    </div>
+  </section>
+
+  <!-- ================= STICKY WHATSAPP BAR ================= -->
+  <div id="sticky-whatsapp-bar">
+    <button id="whatsapp-order-sticky" disabled>
+      Order on WhatsApp
+    </button>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        © <span id="year"></span> VAH – Visual Art Hub<br />
+        A legacy of Madhu Photo Studio (Est. 1985)
+      </p>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="assets/js/script.js"></script>
+  <script>
+    // Auto-update year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
