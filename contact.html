@@ -2,113 +2,214 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>VAH – Visual Art Hub | Because Every Moment Matters</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact VAH – Visual Art Hub</title>
   <meta
     name="description"
-    content="VAH – Visual Art Hub is a personalized gifting brand from Sadasivpet, extending the legacy of Madhu Photo Studio since 1985. Because every moment matters."
+    content="Contact VAH – Visual Art Hub for personalized photo gifts. Located inside Madhu Photo Studio, Sadasivpet. Easy WhatsApp ordering available."
   />
-
-  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
-</head>
+  <style>
+    /* Hero Banner Styles */
+    .page-hero {
+      position: relative;
+      background-image: url('assets/images/contact-hero.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      padding: 0 1rem;
+      margin-bottom: 2rem;
+    }
 
+    .page-hero .overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.35);
+      z-index: 1;
+    }
+
+    .page-hero .content {
+      position: relative;
+      z-index: 2;
+      max-width: 600px;
+    }
+
+    .page-hero h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+    }
+
+    @media (max-width: 600px) {
+      .page-hero {
+        height: 200px;
+      }
+      .page-hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Container */
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 0 auto 4rem auto;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    /* Contact Info */
+    .contact-info {
+      background: #f9f9f9;
+      padding: 2rem 2.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-info p {
+      margin: 1rem 0;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #222;
+    }
+
+    .contact-info span {
+      display: block;
+      font-weight: 400;
+      color: #555;
+      margin-top: 0.3rem;
+    }
+
+    /* WhatsApp button */
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 1.8rem;
+      padding: 0.9rem 2rem;
+      background-color: #25d366;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+      box-shadow: 0 5px 10px rgba(37, 211, 102, 0.4);
+    }
+
+    .whatsapp-btn:hover,
+    .whatsapp-btn:focus {
+      background-color: #1ebe57;
+      outline: none;
+      box-shadow: 0 6px 12px rgba(27, 171, 81, 0.7);
+    }
+
+    /* Header nav and footer consistent styling */
+
+    header.site-header {
+      padding: 1rem 0;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header .brand-name {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #222;
+      margin: 0 0 0.25rem 0;
+    }
+
+    header .tagline {
+      font-style: italic;
+      color: #555;
+      margin: 0 0 0.75rem 0;
+    }
+
+    nav.main-nav a {
+      margin-right: 1.25rem;
+      color: #444;
+      font-weight: 600;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    nav.main-nav a:hover,
+    nav.main-nav a:focus {
+      color: #25d366;
+      outline: none;
+    }
+
+    footer.site-footer {
+      text-align: center;
+      padding: 1rem 0;
+      color: #666;
+      font-size: 0.9rem;
+      font-family: 'Poppins', sans-serif;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
 <body>
 
-  <!-- ================= HEADER ================= -->
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container">
       <h1 class="brand-name">VAH – Visual Art Hub</h1>
-      <p class="tagline">Because every moment matters</p>
-
-      <nav class="main-nav">
+      <p class="tagline">Because Every Moment Matters</p>
+      <nav class="main-nav" aria-label="Primary Navigation">
         <a href="index.html">Home</a>
         <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" aria-current="page">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- ================= HERO ================= -->
-  <section class="hero">
-    <div class="container">
-      <h2>Turn Your Memories Into Meaningful Gifts</h2>
-      <p>
-        We create personalized photo gifts that celebrate love,
-        relationships, and life’s most special moments.
-      </p>
-
-      <a
-        class="cta-button"
-        href="https://wa.me/9876543210"
-        target="_blank"
-        rel="noopener"
-      >
-        Order on WhatsApp
-      </a>
+  <!-- HERO BANNER -->
+  <section class="page-hero" role="banner" aria-label="Contact VAH hero banner">
+    <div class="overlay"></div>
+    <div class="content container">
+      <h1>Contact VAH – Visual Art Hub</h1>
     </div>
   </section>
 
-  <!-- ================= ABOUT ================= -->
-  <section class="about">
-    <div class="container">
-      <h2>About VAH</h2>
+  <!-- CONTACT INFO -->
+  <main class="container" role="main">
+    <section class="contact-info" aria-label="Contact Information">
+      <p><strong>VAH – Visual Art Hub</strong></p>
+      <p>Located inside Madhu Photo Studio, Sadasivpet</p>
+      <p>Services: Custom Photo Gifts &amp; Creative Printing</p>
+      <p>Working Hours: 10:00 AM – 7:00 PM</p>
+      <p>Call / WhatsApp: <a href="https://wa.me/919398287399" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Chat with VAH on WhatsApp">+91 93982 87399</a></p>
+      <p>👉 Contact us on WhatsApp for quick orders &amp; queries</p>
+      <p>📍 Find us on Google Maps — inside Madhu Photo Studio, Sadasivpet</p>
+    </section>
+  </main>
 
-      <p>
-        VAH – Visual Art Hub is the modern extension of
-        <strong>Madhu Photo Studio</strong>, proudly serving
-        Sadasivpet since <strong>1985</strong>.
-      </p>
-
-      <p>
-        With decades of experience and a deep understanding of emotions,
-        we craft personalized gifts with care, quality, and meaning —
-        because your moments deserve more than ordinary products.
-      </p>
-    </div>
-  </section>
-
-  <!-- ================= CONTACT ================= -->
-  <section class="contact">
-    <div class="container">
-      <h2>Visit & Contact Us</h2>
-
-      <p>
-        <strong>Location:</strong><br />
-        Madhu Photo Studio, Sadasivpet
-      </p>
-
-      <p>
-        <strong>Working Hours:</strong><br />
-        10:00 AM – 7:00 PM
-      </p>
-
-      <a
-        class="cta-button secondary"
-        href="https://wa.me/9876543210"
-        target="_blank"
-        rel="noopener"
-      >
-        Chat on WhatsApp
-      </a>
-    </div>
-  </section>
-
-  <!-- ================= FOOTER ================= -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
-      <p>
-        © <span id="year"></span> VAH – Visual Art Hub<br />
-        A legacy of Madhu Photo Studio (Est. 1985)
-      </p>
+      <p>© <span id="year"></span> VAH – Visual Art Hub | A legacy of Madhu Photo Studio (Est. 1985)</p>
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script>
-    // Auto update year
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
 </body>
