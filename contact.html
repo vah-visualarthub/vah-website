@@ -17,13 +17,20 @@
 
 <body>
 
-  <!-- ===== HEADER ===== -->
+  <!-- ================= HEADER ================= -->
   <header class="site-header">
     <div class="container nav-container">
-      <div class="logo">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo">
         <img src="assets/images/vah-logo.png" alt="VAH Logo">
-        <span>Visual Art Hub</span>
-      </div>
+        <div>
+          <strong>Visual Art Hub</strong><br>
+          <span style="font-size:0.8rem; color:#E76F51;">
+            Because Every Moment Matters
+          </span>
+        </div>
+      </a>
 
       <nav>
         <a href="index.html">Home</a>
@@ -31,67 +38,71 @@
         <a href="about.html">About</a>
         <a href="contact.html" class="active">Contact</a>
       </nav>
+
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
+  <!-- ================= HERO ================= -->
   <section class="page-hero">
     <img src="assets/images/contact-hero.png" alt="Contact VAH">
     <div class="hero-text">
-      <h1>Contact Us</h1>
-      <p>Let’s talk about your idea</p>
+      <h1 style="color:#F6C453;">Contact Us</h1>
+      <p>We’re happy to help you create something meaningful</p>
     </div>
   </section>
 
-  <!-- ===== CONTACT CONTENT ===== -->
-  <section style="padding:50px 0;">
-    <div class="container" style="max-width:900px; text-align:center;">
+  <!-- ================= CONTACT INFO ================= -->
+  <section style="padding:60px 0;">
+    <div class="container" style="max-width:900px;">
 
-      <h2>We’d Love to Hear From You</h2>
-      <p style="margin-top:15px; color:#555;">
-        Whether you have a specific product in mind or just an idea,
-        reach out to us directly. We prefer WhatsApp so we can respond
-        faster and understand your requirement better.
-      </p>
+      <div style="text-align:center;">
+        <h2>Get in Touch 📞</h2>
+        <p style="margin-top:12px; color:#555;">
+          Reach out to us for orders, customisation queries, or pricing details.
+          We prefer WhatsApp so we can assist you personally.
+        </p>
+      </div>
 
-      <!-- CONTACT OPTIONS -->
-      <div class="products-grid" style="margin-top:40px;">
+      <div class="contact-grid" style="margin-top:40px;">
 
-        <div class="product-card">
-          <i class="fab fa-whatsapp" style="font-size:40px; color:#25d366;"></i>
-          <h3 style="margin-top:15px;">WhatsApp</h3>
-          <p style="color:#666; margin-top:10px;">
-            Chat with us instantly for enquiries and custom requests.
-          </p>
+        <!-- WhatsApp -->
+        <div class="contact-card">
+          <i class="fab fa-whatsapp"></i>
+          <h3>WhatsApp / Call</h3>
+          <p>+91 9398287399</p>
           <a
             href="https://wa.me/9398287399"
             target="_blank"
-            class="whatsapp-btn"
-            style="margin-top:15px;"
+            class="contact-btn"
           >
-            Message on WhatsApp
+            Chat on WhatsApp
           </a>
         </div>
 
-        <div class="product-card">
-          <i class="fas fa-envelope" style="font-size:40px; color:#555;"></i>
-          <h3 style="margin-top:15px;">Email</h3>
-          <p style="color:#666; margin-top:10px;">
-            Prefer email? Send us your requirement anytime.
+        <!-- Location -->
+        <div class="contact-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Our Location</h3>
+          <p>
+            Inside Madhu Photo Studio<br>
+            Sadasivpet
           </p>
-          <p style="margin-top:10px; font-weight:500;">
-            vah.visualarthub@gmail.com
-          </p>
+          <a
+            href="https://www.google.com/maps/search/Madhu+Photo+Studio+Sadasivpet"
+            target="_blank"
+            class="contact-btn"
+          >
+            View on Google Maps
+          </a>
         </div>
 
-        <div class="product-card">
-          <i class="fab fa-instagram" style="font-size:40px; color:#e1306c;"></i>
-          <h3 style="margin-top:15px;">Instagram</h3>
-          <p style="color:#666; margin-top:10px;">
-            Follow us and DM for latest works and updates.
-          </p>
-          <p style="margin-top:10px; font-weight:500;">
-            @vah.visualarthub
+        <!-- Hours -->
+        <div class="contact-card">
+          <i class="fas fa-clock"></i>
+          <h3>Working Hours</h3>
+          <p>
+            10:00 AM – 7:00 PM<br>
+            All Days
           </p>
         </div>
 
@@ -100,25 +111,50 @@
     </div>
   </section>
 
-  <!-- ===== WHATSAPP CTA ===== -->
+  <!-- ================= WHY WHATSAPP ================= -->
+  <section style="background:#F5F5F5; padding:60px 0;">
+    <div class="container" style="max-width:900px; text-align:center;">
+
+      <h2>Why WhatsApp?</h2>
+      <p style="margin-top:18px; color:#555;">
+        We use WhatsApp so we can understand your exact requirement,
+        discuss customisation options, share previews, and give you
+        clear pricing — all in one place.
+      </p>
+
+      <p style="margin-top:10px; color:#555;">
+        This helps us avoid confusion and deliver results that meet
+        your expectations.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
   <section class="whatsapp-cta">
     <div class="container">
-      <h2>Ready to get started?</h2>
-      <p>Send us your idea and we’ll take it from there</p>
+      <h2>Ready to Place an Order?</h2>
+      <p>Message us on WhatsApp and let’s get started</p>
+
       <a
         href="https://wa.me/9398287399"
         target="_blank"
         class="whatsapp-btn"
       >
-        <i class="fab fa-whatsapp"></i> Start Chat on WhatsApp
+        <i class="fab fa-whatsapp"></i> Message on WhatsApp
       </a>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ================= FOOTER ================= -->
   <footer class="site-footer">
     <div class="container">
-      <p>© 2026 VAH – Visual Art Hub. All rights reserved.</p>
+      <p>
+        © 2026 VAH – Visual Art Hub · Because Every Moment Matters<br>
+        <span style="font-size:0.85rem; color:#777;">
+          by Madhu Photo Studio, Sadasivpet
+        </span>
+      </p>
     </div>
   </footer>
 
