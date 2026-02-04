@@ -8,7 +8,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!-- Font Awesome (optional icons) -->
+  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -17,13 +17,20 @@
 
 <body>
 
-  <!-- ===== HEADER / NAV ===== -->
+  <!-- ================= HEADER ================= -->
   <header class="site-header">
     <div class="container nav-container">
-      <div class="logo">
+
+      <!-- Logo + Tagline -->
+      <a href="index.html" class="logo">
         <img src="assets/images/vah-logo.png" alt="VAH Logo">
-        <span>Visual Art Hub</span>
-      </div>
+        <div>
+          <strong>Visual Art Hub</strong><br>
+          <span style="font-size:0.8rem; color:#E76F51;">
+            Because Every Moment Matters
+          </span>
+        </div>
+      </a>
 
       <nav>
         <a href="index.html">Home</a>
@@ -31,59 +38,128 @@
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
       </nav>
+
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
+  <!-- ================= HERO ================= -->
   <section class="page-hero">
-    <img src="assets/images/Products Page.png" alt="Products">
+    <img src="assets/images/Products Page.png" alt="VAH Products">
     <div class="hero-text">
-      <h1>Our Products</h1>
-      <p>Select what you like and send enquiry via WhatsApp</p>
+      <h1 style="color:#F6C453;">Explore Our Products</h1>
+      <p>
+        Pick what you love, customise it your way,<br>
+        and talk to us directly on WhatsApp
+      </p>
     </div>
   </section>
 
-  <!-- ===== FILTERS ===== -->
+  <!-- ================= INTRO ================= -->
+  <section style="padding:50px 0;">
+    <div class="container" style="max-width:900px; text-align:center;">
+      <p style="color:#555; font-size:1.05rem;">
+        Our products are designed to turn your photos, emotions, and ideas
+        into meaningful personalised gifts. Select the items you’re interested in,
+        choose quantities, and send us your requirement — we’ll handle the rest.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= FILTERS ================= -->
   <section class="filters-section">
     <div class="container filters">
-      <button class="filter-btn active" data-category="All" onclick="filterProducts('All')">All</button>
-      <button class="filter-btn" data-category="Frames" onclick="filterProducts('Frames')">Frames</button>
-      <button class="filter-btn" data-category="Mugs" onclick="filterProducts('Mugs')">Mugs</button>
-      <button class="filter-btn" data-category="T-shirts" onclick="filterProducts('T-shirts')">T-shirts</button>
-      <button class="filter-btn" data-category="Keychains" onclick="filterProducts('Keychains')">Keychains</button>
-      <button class="filter-btn" data-category="Magic Mirror" onclick="filterProducts('Magic Mirror')">Magic Mirror</button>
-      <button class="filter-btn" data-category="Pillows" onclick="filterProducts('Pillows')">Pillows</button>
+
+      <button
+        class="filter-btn active"
+        data-category="All"
+        onclick="filterProducts('All')"
+        style="background:#F6C453; border-color:#F6C453;"
+      >
+        All
+      </button>
+
+      <button class="filter-btn" data-category="Frames" onclick="filterProducts('Frames')">
+        Frames
+      </button>
+      <button class="filter-btn" data-category="Mugs" onclick="filterProducts('Mugs')">
+        Mugs
+      </button>
+      <button class="filter-btn" data-category="T-shirts" onclick="filterProducts('T-shirts')">
+        T-Shirts
+      </button>
+      <button class="filter-btn" data-category="Keychains" onclick="filterProducts('Keychains')">
+        Keychains
+      </button>
+      <button class="filter-btn" data-category="Magic Mirror" onclick="filterProducts('Magic Mirror')">
+        Magic Mirror
+      </button>
+      <button class="filter-btn" data-category="Pillows" onclick="filterProducts('Pillows')">
+        Pillows
+      </button>
+
     </div>
   </section>
 
-  <!-- ===== PRODUCTS GRID ===== -->
+  <!-- ================= PRODUCTS GRID ================= -->
   <section class="products-section">
     <div class="container">
       <div id="products-container" class="products-grid">
-        <!-- Products are injected by main.js -->
+        <!-- Products injected by main.js -->
       </div>
     </div>
   </section>
 
-  <!-- ===== WHATSAPP CTA ===== -->
+  <!-- ================= HOW IT WORKS ================= -->
+  <section style="background:#F5F5F5; padding:60px 0;">
+    <div class="container" style="max-width:900px; text-align:center;">
+
+      <h2>How Ordering Works</h2>
+
+      <p style="margin-top:20px; color:#555;">
+        1. Browse and select the products you like<br>
+        2. Choose quantities for each item<br>
+        3. Send your selection directly on WhatsApp<br>
+        4. We’ll discuss customisation, pricing, and delivery personally
+      </p>
+
+      <p style="margin-top:15px; color:#555;">
+        This helps us give you better attention and create something
+        that truly matches your expectations.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ================= WHATSAPP CTA ================= -->
   <section class="whatsapp-cta">
     <div class="container">
-      <h2>Selected what you like?</h2>
-      <p>Send your enquiry on WhatsApp and we’ll get back to you</p>
-      <button class="whatsapp-btn" onclick="sendToWhatsApp()">
-        <i class="fab fa-whatsapp"></i> Send Enquiry on WhatsApp
+      <h2>Selected your favourites?</h2>
+      <p>Send your list to us and let’s create something meaningful</p>
+
+      <button
+        onclick="sendToWhatsApp()"
+        class="whatsapp-btn"
+        style="background:#25D366; color:#fff;"
+      >
+        <i class="fab fa-whatsapp"></i> Send Selection on WhatsApp
       </button>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ================= FOOTER ================= -->
   <footer class="site-footer">
     <div class="container">
-      <p>© 2026 VAH – Visual Art Hub. All rights reserved.</p>
+      <p>
+        © 2026 VAH – Visual Art Hub · Because Every Moment Matters<br>
+        <span style="font-size:0.85rem; color:#777;">
+          by Madhu Photo Studio, Sadasivpet
+        </span>
+      </p>
     </div>
   </footer>
 
   <!-- JS -->
   <script src="assets/js/main.js"></script>
+
 </body>
 </html>
