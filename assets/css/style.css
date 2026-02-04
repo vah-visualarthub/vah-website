@@ -249,3 +249,49 @@ nav a:hover {
     display: none; /* simple mobile, can upgrade later */
   }
 }
+
+/* ================= MOBILE NAV ================= */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #222;
+  border-radius: 2px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    display: none;
+    flex-direction: column;
+    border-top: 1px solid #eee;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    padding: 16px;
+    margin: 0;
+    border-bottom: 1px solid #f2f2f2;
+  }
+}
