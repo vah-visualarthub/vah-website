@@ -2,163 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>VAH – Visual Art Hub</title>
-  <meta
-    name="description"
-    content="VAH – Visual Art Hub, personalized gifting brand from Madhu Photo Studio legacy. Because Every Moment Matters."
-  />
+  <title>VAH – Visual Art Hub | Personalized Gifts & Prints</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
-  <style>
-    /* Hero Banner Styles */
-    .page-hero {
-      position: relative;
-      background-image: url('assets/images/home-hero-web.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 350px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
-      text-align: center;
-      padding: 0 1rem;
-    }
 
-    /* Overlay */
-    .page-hero .overlay {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0, 0, 0, 0.4);
-      z-index: 1;
-    }
-
-    /* Hero Content */
-    .page-hero .content {
-      position: relative;
-      z-index: 2;
-      max-width: 600px;
-    }
-
-    .page-hero h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.5rem;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-    }
-
-    .page-hero p.tagline {
-      font-size: 1.25rem;
-      font-weight: 500;
-      margin-bottom: 1.5rem;
-      font-style: italic;
-    }
-
-    /* WhatsApp Button */
-    .whatsapp-btn {
-      background-color: #25d366;
-      color: white;
-      padding: 0.85rem 2rem;
-      font-size: 1.1rem;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 4px 8px rgba(37, 211, 102, 0.4);
-      transition: background-color 0.3s ease;
-      display: inline-block;
-    }
-
-    .whatsapp-btn:hover,
-    .whatsapp-btn:focus {
-      background-color: #1ebe57;
-      outline: none;
-      text-decoration: none;
-    }
-
-    /* Responsive Hero - Mobile Image Swap */
-    @media (max-width: 600px) {
-      .page-hero {
-        height: 280px;
-        background-image: url('assets/images/home-hero-mobile.jpg');
-      }
-
-      .page-hero h1 {
-        font-size: 2rem;
-      }
-
-      .page-hero p.tagline {
-        font-size: 1rem;
-      }
-    }
-
-    /* Basic page styling for container */
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    /* Simple header nav styling */
-    header.site-header {
-      padding: 1rem 0;
-      background-color: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    header .brand-name {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      font-size: 1.8rem;
-      color: #222;
-      margin: 0 0 0.25rem 0;
-    }
-
-    header .tagline {
-      font-style: italic;
-      color: #555;
-      margin: 0 0 0.75rem 0;
-    }
-
-    nav.main-nav a {
-      margin-right: 1.25rem;
-      color: #444;
-      font-weight: 600;
-      text-decoration: none;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    nav.main-nav a:hover,
-    nav.main-nav a:focus {
-      color: #25d366;
-      outline: none;
-    }
-
-    /* Footer styling */
-    footer.site-footer {
-      text-align: center;
-      padding: 1rem 0;
-      color: #666;
-      font-size: 0.9rem;
-      font-family: 'Poppins', sans-serif;
-      margin-top: 4rem;
-    }
-  </style>
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
 </head>
+
 <body>
 
-  <!-- HEADER -->
+  <!-- ===== HEADER ===== -->
   <header class="site-header">
-    <div class="container">
-      <h1 class="brand-name">VAH – Visual Art Hub</h1>
-      <p class="tagline">Because Every Moment Matters</p>
-      <nav class="main-nav" aria-label="Primary Navigation">
-        <a href="index.html" aria-current="page">Home</a>
+    <div class="container nav-container">
+      <div class="logo">
+        <img src="assets/images/vah-logo.png" alt="VAH Logo">
+        <span>Visual Art Hub</span>
+      </div>
+
+      <nav>
+        <a href="index.html" class="active">Home</a>
         <a href="products.html">Products</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
@@ -166,35 +34,90 @@
     </div>
   </header>
 
-  <!-- HERO BANNER -->
-  <section class="page-hero" role="banner" aria-label="VAH hero banner">
-    <div class="overlay"></div>
-    <div class="content container">
-      <h1>VAH – Visual Art Hub</h1>
-      <p class="tagline">Because Every Moment Matters</p>
-      <a
-        class="whatsapp-btn"
-        href="https://wa.me/919876543210?text=Hi%20VAH,%20I%E2%80%99d%20like%20to%20order%20personalized%20gifts."
-        target="_blank"
-        rel="noopener"
-        aria-label="Order on WhatsApp"
-      >
-        Order on WhatsApp
+  <!-- ===== HERO SECTION ===== -->
+  <section class="page-hero">
+    <img src="assets/images/home-hero-web.png" alt="VAH Personalized Gifts">
+    <div class="hero-text">
+      <h1>Personalised Gifts, Prints & Art</h1>
+      <p>Select what you love. Enquire instantly on WhatsApp.</p>
+      <a href="products.html" class="whatsapp-btn" style="margin-top:15px;">
+        Explore Products
       </a>
     </div>
   </section>
 
-  <!-- OPTIONAL: Add more homepage content here if needed -->
+  <!-- ===== ABOUT VAH ===== -->
+  <section style="padding:50px 0;">
+    <div class="container" style="text-align:center; max-width:800px;">
+      <h2 style="font-size:2rem;">Welcome to VAH – Visual Art Hub</h2>
+      <p style="margin-top:15px; color:#555;">
+        We create personalised gifts and custom art products that turn your
+        memories into something tangible. From photo frames and magic mirrors
+        to mugs, t-shirts, keychains and pillows — everything is crafted with care.
+      </p>
+    </div>
+  </section>
 
-  <!-- FOOTER -->
+  <!-- ===== PRODUCT HIGHLIGHTS ===== -->
+  <section style="background:#fafafa; padding:50px 0;">
+    <div class="container">
+      <h2 style="text-align:center; margin-bottom:30px;">What We Offer</h2>
+
+      <div class="products-grid">
+        <div class="product-card">
+          <img src="assets/images/product-frames.jpg" alt="Frames">
+          <h3>Photo Frames</h3>
+        </div>
+
+        <div class="product-card">
+          <img src="assets/images/product-mugs.jpg" alt="Mugs">
+          <h3>Custom Mugs</h3>
+        </div>
+
+        <div class="product-card">
+          <img src="assets/images/product-tshirts.jpg" alt="T-Shirts">
+          <h3>Printed T-Shirts</h3>
+        </div>
+
+        <div class="product-card">
+          <img src="assets/images/product-magic-mirror.jpg" alt="Magic Mirror">
+          <h3>Magic Mirror</h3>
+        </div>
+
+        <div class="product-card">
+          <img src="assets/images/product-pillows.jpg" alt="Pillows">
+          <h3>Photo Pillows</h3>
+        </div>
+
+        <div class="product-card">
+          <img src="assets/images/product-keychains.jpg" alt="Keychains">
+          <h3>Custom Keychains</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHATSAPP CTA ===== -->
+  <section class="whatsapp-cta">
+    <div class="container">
+      <h2>Have something in mind?</h2>
+      <p>Select products and send us your requirement directly on WhatsApp</p>
+      <a
+        href="https://wa.me/9398287399"
+        target="_blank"
+        class="whatsapp-btn"
+      >
+        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> VAH – Visual Art Hub | A legacy of Madhu Photo Studio (Est. 1985)</p>
+      <p>© 2026 VAH – Visual Art Hub. All rights reserved.</p>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
