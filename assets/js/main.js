@@ -1,69 +1,70 @@
-/*******************************
- * VAH – Visual Art Hub
- * WhatsApp-first Catalogue Logic
- *******************************/
+/*************************************************
+ VAH – Visual Art Hub
+ WhatsApp-first Product Selection Logic
+**************************************************/
 
-// ===== CONFIG =====
-const VAH_WHATSAPP_NUMBER = "9398287399";
+const WHATSAPP_NUMBER = "9398287399";
 
-// ===== PRODUCT DATA =====
-// You can easily add / remove products here later
+/* ================= PRODUCT DATA ================= */
+
 const products = [
   {
     id: 1,
-    name: "Photo Frames",
+    name: "Photo Frame",
     category: "Frames",
     image: "assets/images/product-frames.jpg"
   },
   {
     id: 2,
-    name: "Custom Mugs",
+    name: "Custom Mug",
     category: "Mugs",
     image: "assets/images/product-mugs.jpg"
   },
   {
     id: 3,
-    name: "Printed T-Shirts",
+    name: "Printed T-Shirt",
     category: "T-shirts",
     image: "assets/images/product-tshirts.jpg"
   },
   {
     id: 4,
-    name: "Custom Keychains",
+    name: "Photo Pillow",
+    category: "Pillows",
+    image: "assets/images/product-pillows.jpg"
+  },
+  {
+    id: 5,
+    name: "Custom Keychain",
     category: "Keychains",
     image: "assets/images/product-keychains.jpg"
   },
   {
-    id: 5,
+    id: 6,
     name: "Magic Mirror",
     category: "Magic Mirror",
     image: "assets/images/product-magic-mirror.jpg"
-  },
-  {
-    id: 6,
-    name: "Photo Pillows",
-    category: "Pillows",
-    image: "assets/images/product-pillows.jpg"
   }
 ];
 
-// ===== STATE =====
-let selectedItems = {};
+/* ================= STATE ================= */
 
-// ===== RENDER PRODUCTS =====
-function renderProducts(filterCategory = "All") {
+let selectedProducts = {};
+
+/* ================= RENDER PRODUCTS ================= */
+
+function renderProducts(category = "All") {
   const container = document.getElementById("products-container");
   if (!container) return;
 
   container.innerHTML = "";
 
-  const filteredProducts =
-    filterCategory === "All"
+  const filtered =
+    category === "All"
       ? products
-      : products.filter(p => p.category === filterCategory);
+      : products.filter(p => p.category === category);
 
-  filteredProducts.forEach(product => {
-    const qty = selectedItems[product.id]?.qty || 1;
+  filtered.forEach(product => {
+    const quantity = selectedProducts[product.id] || 0;
 
     const card = document.createElement("div");
     card.className = "product-card";
@@ -71,94 +72,80 @@ function renderProducts(filterCategory = "All") {
     card.innerHTML = `
       <img src="${product.image}" alt="${product.name}">
       <h3>${product.name}</h3>
-      <p class="category">${product.category}</p>
 
-      <div class="qty-control">
-        <button onclick="changeQty(${product.id}, -1)">−</button>
-        <span id="qty-${product.id}">${qty}</span>
-        <button onclick="changeQty(${product.id}, 1)">+</button>
+      <div style="padding: 0 16px 20px;">
+        <div style="display:flex; justify-content:center; gap:10px; margin-top:12px;">
+          <button onclick="decreaseQty(${product.id})">−</button>
+          <span style="min-width:30px; text-align:center; font-weight:600;">
+            ${quantity}
+          </span>
+          <button onclick="increaseQty(${product.id})">+</button>
+        </div>
       </div>
-
-      <button class="select-btn" onclick="toggleSelect(${product.id})">
-        ${selectedItems[product.id] ? "Selected" : "Select Item"}
-      </button>
     `;
 
     container.appendChild(card);
   });
 }
 
-// ===== QUANTITY CHANGE =====
-function changeQty(productId, delta) {
-  if (!selectedItems[productId]) {
-    selectedItems[productId] = { qty: 1 };
-  }
+/* ================= FILTER ================= */
 
-  selectedItems[productId].qty += delta;
-  if (selectedItems[productId].qty < 1) {
-    selectedItems[productId].qty = 1;
-  }
+function filterProducts(category) {
+  document
+    .querySelectorAll(".filter-btn")
+    .forEach(btn => btn.classList.remove("active"));
 
-  document.getElementById(`qty-${productId}`).innerText =
-    selectedItems[productId].qty;
+  event.target.classList.add("active");
+  renderProducts(category);
 }
 
-// ===== SELECT / DESELECT ITEM =====
-function toggleSelect(productId) {
-  if (selectedItems[productId]) {
-    delete selectedItems[productId];
-  } else {
-    selectedItems[productId] = { qty: 1 };
-  }
+/* ================= QUANTITY HANDLERS ================= */
+
+function increaseQty(id) {
+  selectedProducts[id] = (selectedProducts[id] || 0) + 1;
+  renderProducts(getActiveCategory());
+}
+
+function decreaseQty(id) {
+  if (!selectedProducts[id]) return;
+
+  selectedProducts[id]--;
+  if (selectedProducts[id] <= 0) delete selectedProducts[id];
 
   renderProducts(getActiveCategory());
 }
 
-// ===== CATEGORY FILTER =====
-function filterProducts(category) {
-  document.querySelectorAll(".filter-btn").forEach(btn =>
-    btn.classList.remove("active")
-  );
-
-  document
-    .querySelector(`[data-category="${category}"]`)
-    .classList.add("active");
-
-  renderProducts(category);
-}
-
-// ===== GET ACTIVE CATEGORY =====
 function getActiveCategory() {
-  const activeBtn = document.querySelector(".filter-btn.active");
-  return activeBtn ? activeBtn.dataset.category : "All";
+  const active = document.querySelector(".filter-btn.active");
+  return active ? active.dataset.category : "All";
 }
 
-// ===== SEND TO WHATSAPP =====
-function sendToWhatsApp() {
-  const selectedIds = Object.keys(selectedItems);
+/* ================= WHATSAPP MESSAGE ================= */
 
-  if (selectedIds.length === 0) {
-    alert("Please select at least one item.");
+function sendToWhatsApp() {
+  if (Object.keys(selectedProducts).length === 0) {
+    alert("Please select at least one product.");
     return;
   }
 
-  let message = "Hello VAH – Visual Art Hub 👋%0A%0A";
-  message += "I am interested in the following items:%0A";
+  let message = "Hello VAH 👋%0A%0A";
+  message += "I am interested in the following products:%0A";
 
-  selectedIds.forEach((id, index) => {
-    const product = products.find(p => p.id == id);
-    const qty = selectedItems[id].qty;
-
-    message += `${index + 1}. ${product.name} (${product.category}) - Qty: ${qty}%0A`;
+  products.forEach(p => {
+    if (selectedProducts[p.id]) {
+      message += `• ${p.name} – Qty: ${selectedProducts[p.id]}%0A`;
+    }
   });
 
-  message += "%0APlease contact me with details. Thank you!";
+  message += "%0APlease contact me for customization, pricing, and details.%0A";
+  message += "%0AThank you!";
 
-  const url = `https://wa.me/${VAH_WHATSAPP_NUMBER}?text=${message}`;
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
   window.open(url, "_blank");
 }
 
-// ===== INIT =====
+/* ================= INIT ================= */
+
 document.addEventListener("DOMContentLoaded", () => {
   renderProducts();
 });
