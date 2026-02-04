@@ -2,215 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact VAH – Visual Art Hub</title>
-  <meta
-    name="description"
-    content="Contact VAH – Visual Art Hub for personalized photo gifts. Located inside Madhu Photo Studio, Sadasivpet. Easy WhatsApp ordering available."
-  />
+  <title>Contact Us | VAH – Visual Art Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
-  <style>
-    /* Hero Banner Styles */
-    .page-hero {
-      position: relative;
-      background-image: url('assets/images/contact-hero.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 280px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
-      text-align: center;
-      padding: 0 1rem;
-      margin-bottom: 2rem;
-    }
 
-    .page-hero .overlay {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0, 0, 0, 0.35);
-      z-index: 1;
-    }
-
-    .page-hero .content {
-      position: relative;
-      z-index: 2;
-      max-width: 600px;
-    }
-
-    .page-hero h1 {
-      font-size: 2.5rem;
-      margin: 0;
-      font-weight: 700;
-      letter-spacing: 1.2px;
-    }
-
-    @media (max-width: 600px) {
-      .page-hero {
-        height: 200px;
-      }
-      .page-hero h1 {
-        font-size: 1.8rem;
-      }
-    }
-
-    /* Container */
-    .container {
-      width: 90%;
-      max-width: 900px;
-      margin: 0 auto 4rem auto;
-      font-family: 'Poppins', sans-serif;
-      color: #333;
-      line-height: 1.6;
-      font-size: 1rem;
-    }
-
-    /* Contact Info */
-    .contact-info {
-      background: #f9f9f9;
-      padding: 2rem 2.5rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
-      max-width: 500px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .contact-info p {
-      margin: 1rem 0;
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: #222;
-    }
-
-    .contact-info span {
-      display: block;
-      font-weight: 400;
-      color: #555;
-      margin-top: 0.3rem;
-    }
-
-    /* WhatsApp button */
-    .whatsapp-btn {
-      display: inline-block;
-      margin-top: 1.8rem;
-      padding: 0.9rem 2rem;
-      background-color: #25d366;
-      color: #fff;
-      font-weight: 700;
-      font-size: 1.1rem;
-      border-radius: 30px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-      font-family: 'Poppins', sans-serif;
-      box-shadow: 0 5px 10px rgba(37, 211, 102, 0.4);
-    }
-
-    .whatsapp-btn:hover,
-    .whatsapp-btn:focus {
-      background-color: #1ebe57;
-      outline: none;
-      box-shadow: 0 6px 12px rgba(27, 171, 81, 0.7);
-    }
-
-    /* Header nav and footer consistent styling */
-
-    header.site-header {
-      padding: 1rem 0;
-      background-color: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    header .brand-name {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      font-size: 1.8rem;
-      color: #222;
-      margin: 0 0 0.25rem 0;
-    }
-
-    header .tagline {
-      font-style: italic;
-      color: #555;
-      margin: 0 0 0.75rem 0;
-    }
-
-    nav.main-nav a {
-      margin-right: 1.25rem;
-      color: #444;
-      font-weight: 600;
-      text-decoration: none;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    nav.main-nav a:hover,
-    nav.main-nav a:focus {
-      color: #25d366;
-      outline: none;
-    }
-
-    footer.site-footer {
-      text-align: center;
-      padding: 1rem 0;
-      color: #666;
-      font-size: 0.9rem;
-      font-family: 'Poppins', sans-serif;
-      margin-top: 4rem;
-    }
-  </style>
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
 </head>
+
 <body>
 
-  <!-- HEADER -->
+  <!-- ===== HEADER ===== -->
   <header class="site-header">
-    <div class="container">
-      <h1 class="brand-name">VAH – Visual Art Hub</h1>
-      <p class="tagline">Because Every Moment Matters</p>
-      <nav class="main-nav" aria-label="Primary Navigation">
+    <div class="container nav-container">
+      <div class="logo">
+        <img src="assets/images/vah-logo.png" alt="VAH Logo">
+        <span>Visual Art Hub</span>
+      </div>
+
+      <nav>
         <a href="index.html">Home</a>
         <a href="products.html">Products</a>
         <a href="about.html">About</a>
-        <a href="contact.html" aria-current="page">Contact</a>
+        <a href="contact.html" class="active">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO BANNER -->
-  <section class="page-hero" role="banner" aria-label="Contact VAH hero banner">
-    <div class="overlay"></div>
-    <div class="content container">
-      <h1>Contact VAH – Visual Art Hub</h1>
+  <!-- ===== HERO ===== -->
+  <section class="page-hero">
+    <img src="assets/images/contact-hero.png" alt="Contact VAH">
+    <div class="hero-text">
+      <h1>Contact Us</h1>
+      <p>Let’s talk about your idea</p>
     </div>
   </section>
 
-  <!-- CONTACT INFO -->
-  <main class="container" role="main">
-    <section class="contact-info" aria-label="Contact Information">
-      <p><strong>VAH – Visual Art Hub</strong></p>
-      <p>Located inside Madhu Photo Studio, Sadasivpet</p>
-      <p>Services: Custom Photo Gifts &amp; Creative Printing</p>
-      <p>Working Hours: 10:00 AM – 7:00 PM</p>
-      <p>Call / WhatsApp: <a href="https://wa.me/919398287399" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Chat with VAH on WhatsApp">+91 93982 87399</a></p>
-      <p>👉 Contact us on WhatsApp for quick orders &amp; queries</p>
-      <p>📍 Find us on Google Maps — inside Madhu Photo Studio, Sadasivpet</p>
-    </section>
-  </main>
+  <!-- ===== CONTACT CONTENT ===== -->
+  <section style="padding:50px 0;">
+    <div class="container" style="max-width:900px; text-align:center;">
 
-  <!-- FOOTER -->
+      <h2>We’d Love to Hear From You</h2>
+      <p style="margin-top:15px; color:#555;">
+        Whether you have a specific product in mind or just an idea,
+        reach out to us directly. We prefer WhatsApp so we can respond
+        faster and understand your requirement better.
+      </p>
+
+      <!-- CONTACT OPTIONS -->
+      <div class="products-grid" style="margin-top:40px;">
+
+        <div class="product-card">
+          <i class="fab fa-whatsapp" style="font-size:40px; color:#25d366;"></i>
+          <h3 style="margin-top:15px;">WhatsApp</h3>
+          <p style="color:#666; margin-top:10px;">
+            Chat with us instantly for enquiries and custom requests.
+          </p>
+          <a
+            href="https://wa.me/9398287399"
+            target="_blank"
+            class="whatsapp-btn"
+            style="margin-top:15px;"
+          >
+            Message on WhatsApp
+          </a>
+        </div>
+
+        <div class="product-card">
+          <i class="fas fa-envelope" style="font-size:40px; color:#555;"></i>
+          <h3 style="margin-top:15px;">Email</h3>
+          <p style="color:#666; margin-top:10px;">
+            Prefer email? Send us your requirement anytime.
+          </p>
+          <p style="margin-top:10px; font-weight:500;">
+            vah.visualarthub@gmail.com
+          </p>
+        </div>
+
+        <div class="product-card">
+          <i class="fab fa-instagram" style="font-size:40px; color:#e1306c;"></i>
+          <h3 style="margin-top:15px;">Instagram</h3>
+          <p style="color:#666; margin-top:10px;">
+            Follow us and DM for latest works and updates.
+          </p>
+          <p style="margin-top:10px; font-weight:500;">
+            @vah.visualarthub
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== WHATSAPP CTA ===== -->
+  <section class="whatsapp-cta">
+    <div class="container">
+      <h2>Ready to get started?</h2>
+      <p>Send us your idea and we’ll take it from there</p>
+      <a
+        href="https://wa.me/9398287399"
+        target="_blank"
+        class="whatsapp-btn"
+      >
+        <i class="fab fa-whatsapp"></i> Start Chat on WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> VAH – Visual Art Hub | A legacy of Madhu Photo Studio (Est. 1985)</p>
+      <p>© 2026 VAH – Visual Art Hub. All rights reserved.</p>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 
 </body>
 </html>
