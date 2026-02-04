@@ -149,3 +149,18 @@ function sendToWhatsApp() {
 document.addEventListener("DOMContentLoaded", () => {
   renderProducts();
 });
+
+/* ================= MOBILE MENU ================= */
+
+function toggleMenu() {
+  const nav = document.getElementById("main-nav");
+  nav.classList.toggle("active");
+}
+
+// Close menu when link is clicked (mobile UX)
+document.addEventListener("click", function (e) {
+  if (e.target.closest("nav a")) {
+    const nav = document.getElementById("main-nav");
+    nav.classList.remove("active");
+  }
+});
