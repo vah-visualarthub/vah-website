@@ -19,28 +19,36 @@
 
   <!-- ================= HEADER ================= -->
   <header class="site-header">
-    <div class="container nav-container">
+  <div class="container nav-container">
 
-      <!-- Logo + Tagline -->
-      <a href="index.html" class="logo">
-        <img src="assets/images/vah-logo.png" alt="VAH Logo">
-        <div>
-          <strong>Visual Art Hub</strong><br>
-          <span style="font-size:0.8rem; color:#E76F51;">
-            Because Every Moment Matters
-          </span>
-        </div>
-      </a>
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <img src="assets/images/vah-logo.png" alt="VAH Logo">
+      <div>
+        <strong>Visual Art Hub</strong><br>
+        <span style="font-size:0.8rem; color:#E76F51;">
+          Because Every Moment Matters
+        </span>
+      </div>
+    </a>
 
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="products.html" class="active">Products</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-
+    <!-- Hamburger -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-  </header>
+
+    <!-- Navigation -->
+    <nav id="main-nav">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
 
   <!-- ================= HERO ================= -->
   <section class="page-hero">
@@ -163,3 +171,4 @@
 
 </body>
 </html>
+
