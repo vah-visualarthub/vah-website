@@ -2,256 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About VAH – Visual Art Hub</title>
-  <meta
-    name="description"
-    content="Learn about VAH – Visual Art Hub, a personalized gifting brand with a legacy since 1985, continuing Madhu Photo Studio's tradition."
-  />
+  <title>About Us | VAH – Visual Art Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
-  <style>
-    /* Hero Banner Styles */
-    .page-hero {
-      position: relative;
-      background-image: url('assets/images/about-hero.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 280px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
-      text-align: center;
-      padding: 0 1rem;
-      margin-bottom: 2rem;
-    }
 
-    .page-hero .overlay {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(0, 0, 0, 0.35);
-      z-index: 1;
-    }
-
-    .page-hero .content {
-      position: relative;
-      z-index: 2;
-      max-width: 600px;
-    }
-
-    .page-hero h1 {
-      font-size: 2.5rem;
-      margin: 0;
-      font-weight: 700;
-      letter-spacing: 1.2px;
-    }
-
-    @media (max-width: 600px) {
-      .page-hero {
-        height: 200px;
-      }
-      .page-hero h1 {
-        font-size: 1.8rem;
-      }
-    }
-
-    /* Container */
-    .container {
-      width: 90%;
-      max-width: 900px;
-      margin: 0 auto 4rem auto;
-      font-family: 'Poppins', sans-serif;
-      color: #333;
-      line-height: 1.6;
-      font-size: 1rem;
-    }
-
-    /* Headings and sections */
-    .container h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      color: #222;
-      font-weight: 700;
-    }
-
-    .container p {
-      margin-bottom: 1.25rem;
-    }
-
-    /* Emphasis for key points */
-    .highlight {
-      font-weight: 600;
-      color: #25d366;
-    }
-
-    /* Lists */
-    ul {
-      list-style: disc inside;
-      margin-bottom: 2rem;
-      color: #444;
-    }
-
-    ul li {
-      margin-bottom: 0.7rem;
-    }
-
-    /* Header nav and footer copied from index.html for consistency */
-
-    header.site-header {
-      padding: 1rem 0;
-      background-color: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    header .brand-name {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      font-size: 1.8rem;
-      color: #222;
-      margin: 0 0 0.25rem 0;
-    }
-
-    header .tagline {
-      font-style: italic;
-      color: #555;
-      margin: 0 0 0.75rem 0;
-    }
-
-    nav.main-nav a {
-      margin-right: 1.25rem;
-      color: #444;
-      font-weight: 600;
-      text-decoration: none;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    nav.main-nav a:hover,
-    nav.main-nav a:focus {
-      color: #25d366;
-      outline: none;
-    }
-
-    footer.site-footer {
-      text-align: center;
-      padding: 1rem 0;
-      color: #666;
-      font-size: 0.9rem;
-      font-family: 'Poppins', sans-serif;
-      margin-top: 4rem;
-    }
-  </style>
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
 </head>
+
 <body>
 
-  <!-- HEADER -->
+  <!-- ===== HEADER ===== -->
   <header class="site-header">
-    <div class="container">
-      <h1 class="brand-name">VAH – Visual Art Hub</h1>
-      <p class="tagline">Because Every Moment Matters</p>
-      <nav class="main-nav" aria-label="Primary Navigation">
+    <div class="container nav-container">
+      <div class="logo">
+        <img src="assets/images/vah-logo.png" alt="VAH Logo">
+        <span>Visual Art Hub</span>
+      </div>
+
+      <nav>
         <a href="index.html">Home</a>
         <a href="products.html">Products</a>
-        <a href="about.html" aria-current="page">About</a>
+        <a href="about.html" class="active">About</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO BANNER -->
-  <section class="page-hero" role="banner" aria-label="About VAH hero banner">
-    <div class="overlay"></div>
-    <div class="content container">
-      <h1>About VAH – Visual Art Hub</h1>
+  <!-- ===== HERO ===== -->
+  <section class="page-hero">
+    <img src="assets/images/about-hero.png" alt="About VAH">
+    <div class="hero-text">
+      <h1>About VAH</h1>
+      <p>Turning ideas and memories into meaningful products</p>
     </div>
   </section>
 
-  <!-- ABOUT CONTENT -->
-  <main class="container" role="main">
-    <p>
-      Visual Art Hub (VAH) represents the next chapter of a family legacy that began in 1985 with Madhu Photo Studio, a trusted name in studio photography in Sadasivpet for over four decades.
-    </p>
+  <!-- ===== ABOUT CONTENT ===== -->
+  <section style="padding:50px 0;">
+    <div class="container" style="max-width:900px;">
+      
+      <h2 style="text-align:center; font-size:2rem;">
+        VAH – Visual Art Hub
+      </h2>
 
-    <p>
-      For generations, Madhu Photo Studio has been part of countless family memories — from childhood portraits to milestone moments. Our grandfather and father personally handled in-studio photography, earning the community’s trust through patience, quality workmanship, and honest service. Those same values continue to guide everything we do today.
-    </p>
+      <p style="margin-top:20px; color:#555; text-align:center;">
+        VAH – Visual Art Hub is a creative brand focused on crafting personalised
+        gifts and custom art products that tell a story. We believe every photo,
+        every idea, and every memory deserves to be transformed into something
+        tangible and timeless.
+      </p>
 
-    <p>
-      While Madhu Photo Studio remains dedicated exclusively to traditional studio photography, VAH – Visual Art Hub is our step into the world of personalized gifting and creative printing. It brings a fresh, modern approach while staying deeply rooted in our family’s long experience with photographs, visual quality, and finishing.
-    </p>
+      <p style="margin-top:15px; color:#555; text-align:center;">
+        Instead of a traditional online store, we follow a WhatsApp-first approach
+        so we can understand your exact requirement, guide you with options,
+        and deliver something that truly matches your expectations.
+      </p>
 
-    <p>
-      At VAH, we truly believe that <span class="highlight">every moment matters.</span><br />
-      That belief drives us to transform photos, ideas, and emotions into meaningful customized gifts that people can hold, share, and cherish.
-    </p>
+    </div>
+  </section>
 
-    <h2>What We Do at VAH 🎁</h2>
-    <ul>
-      <li>Customized photo gifts</li>
-      <li>Printed mugs, t-shirts, cushions, and frames</li>
-      <li>Creative gifting for birthdays, anniversaries, and special occasions</li>
-    </ul>
+  <!-- ===== WHY VAH ===== -->
+  <section style="background:#fafafa; padding:50px 0;">
+    <div class="container">
+      <h2 style="text-align:center; margin-bottom:30px;">
+        Why Choose VAH?
+      </h2>
 
-    <p>
-      With decades of hands-on experience working with photographs, we understand how important clarity, color accuracy, and finishing are — ensuring every product meets the standards our family business is known for.
-    </p>
+      <div class="products-grid">
+        <div class="product-card">
+          <h3>Personalised Approach</h3>
+          <p style="color:#666; margin-top:10px;">
+            Every order is handled personally. We don’t believe in one-size-fits-all
+            products — your idea matters.
+          </p>
+        </div>
 
-    <h2>Why Choose Visual Art Hub? 🌟</h2>
-    <ul>
-      <li>🎨 Fully Customized Designs – Your photo, your text, your style</li>
-      <li>🧡 Personally Crafted with Care – Every order is handled individually</li>
-      <li>🎁 Perfect for Every Occasion – Birthdays, anniversaries, return gifts &amp; more</li>
-      <li>💬 Easy WhatsApp Ordering – Direct communication and quick responses</li>
-      <li>💰 Affordable &amp; Honest Pricing – Quality gifts without unnecessary costs</li>
-      <li>🤝 40+ Years of Trusted Experience – A legacy built on honesty</li>
-      <li>🖼️ Photo &amp; Print Expertise – Deep understanding of visual quality and finishing</li>
-    </ul>
+        <div class="product-card">
+          <h3>Quality Craftsmanship</h3>
+          <p style="color:#666; margin-top:10px;">
+            From materials to finishing, we focus on quality so your gift lasts
+            and feels premium.
+          </p>
+        </div>
 
-    <p>
-      We are a small, passionate business, and every order you place supports our journey into personalized gifting.
-    </p>
+        <div class="product-card">
+          <h3>Clear Communication</h3>
+          <p style="color:#666; margin-top:10px;">
+            WhatsApp-first means faster replies, better clarity, and fewer surprises.
+          </p>
+        </div>
 
-    <h2>How Ordering Works 🛒</h2>
-    <p>
-      Our website acts as a product catalogue to help you explore available options.<br />
-      Once you select a product, simply place your order through WhatsApp, where we will:
-    </p>
-    <ul>
-      <li>Discuss your customization requirements</li>
-      <li>Confirm design, quantity, and pricing</li>
-      <li>Process your order personally</li>
-    </ul>
-    <p>
-      This approach allows us to give each customer better attention, clearer communication, and faster service.
-    </p>
+        <div class="product-card">
+          <h3>Creative Flexibility</h3>
+          <p style="color:#666; margin-top:10px;">
+            Custom sizes, designs, and concepts — we adapt to what you need,
+            not the other way around.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <h2>Our Promise 🤝</h2>
-    <ul>
-      <li>Honest pricing</li>
-      <li>Clear and transparent communication</li>
-      <li>Quality output</li>
-      <li>Satisfaction you can trust</li>
-    </ul>
+  <!-- ===== MISSION ===== -->
+  <section style="padding:50px 0;">
+    <div class="container" style="text-align:center; max-width:800px;">
+      <h2>Our Mission</h2>
+      <p style="margin-top:15px; color:#555;">
+        Our mission is to make personalised gifting simple, transparent, and
+        meaningful. By listening first and creating second, we aim to deliver
+        products that people genuinely connect with.
+      </p>
+    </div>
+  </section>
 
-    <p>
-      We don’t believe in mass production.<br />
-      We believe in meaningful creation.
-    </p>
-  </main>
+  <!-- ===== WHATSAPP CTA ===== -->
+  <section class="whatsapp-cta">
+    <div class="container">
+      <h2>Have an idea in mind?</h2>
+      <p>Let’s discuss it and bring it to life</p>
+      <a
+        href="https://wa.me/9398287399"
+        target="_blank"
+        class="whatsapp-btn"
+      >
+        <i class="fab fa-whatsapp"></i> Talk to Us on WhatsApp
+      </a>
+    </div>
+  </section>
 
-  <!-- FOOTER -->
+  <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> VAH – Visual Art Hub | A legacy of Madhu Photo Studio (Est. 1985)</p>
+      <p>© 2026 VAH – Visual Art Hub. All rights reserved.</p>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 
 </body>
 </html>
