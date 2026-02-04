@@ -1,6 +1,8 @@
-/* ==========================
-   GLOBAL STYLES
-========================== */
+/* =========================
+   VAH – Visual Art Hub
+   Global Styles
+========================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -8,324 +10,286 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   line-height: 1.6;
-  font-size: 1rem;
-  color: #333;
-  background-color: #fff;
+  color: #222;
+  background: #fff;
 }
 
-/* ==========================
-   CONTAINER
-========================== */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
 .container {
   width: 90%;
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* ==========================
-   HEADER
-========================== */
-header.site-header {
-  padding: 1rem 0;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+/* =========================
+   Header / Navigation
+========================= */
+
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 1000;
 }
 
-header .brand-name {
-  font-weight: 700;
-  font-size: 1.8rem;
-  color: #222;
-  margin-bottom: 0.25rem;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
 }
 
-header .tagline {
-  font-style: italic;
-  color: #555;
-  margin-bottom: 0.75rem;
-}
-
-nav.main-nav a {
-  margin-right: 1.25rem;
-  color: #444;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-nav.main-nav a:hover,
-nav.main-nav a:focus {
-  color: #25d366;
-  outline: none;
-}
-
-/* ==========================
-   HERO BANNERS
-========================== */
-.page-hero {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  height: 280px;
+.logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-align: center;
-  padding: 0 1rem;
-  margin-bottom: 2rem;
+  gap: 10px;
+  font-weight: 600;
 }
 
-.page-hero .overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0,0,0,0.35);
-  z-index: 1;
+.logo img {
+  height: 40px;
 }
 
-.page-hero .content {
+nav a {
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+nav a.active,
+nav a:hover {
+  color: #25d366;
+}
+
+/* =========================
+   Page Hero
+========================= */
+
+.page-hero {
   position: relative;
-  z-index: 2;
 }
 
-.page-hero h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: 1.2px;
+.page-hero img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
-/* ==========================
-   FILTER BUTTONS
-========================== */
-.product-filters {
+.hero-text {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin-bottom: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 2.2rem;
+}
+
+.hero-text p {
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+/* =========================
+   Filters
+========================= */
+
+.filters-section {
+  padding: 30px 0;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
 .filter-btn {
-  background: #eee;
-  border: none;
-  border-radius: 25px;
-  padding: 0.5rem 1.3rem;
-  margin: 0 0.4rem 0.8rem 0.4rem;
-  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  background: #fff;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 0.9rem;
 }
 
-.filter-btn:hover,
-.filter-btn:focus {
-  background-color: #25d366;
-  color: white;
-  outline: none;
+.filter-btn.active,
+.filter-btn:hover {
+  background: #25d366;
+  color: #fff;
+  border-color: #25d366;
 }
 
-.filter-btn.active {
-  background-color: #25d366;
-  color: white;
+/* =========================
+   Products Grid
+========================= */
+
+.products-section {
+  padding: 40px 0;
 }
 
-/* ==========================
-   PRODUCT GRID & CARDS
-========================== */
-.product-grid {
+.products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
 }
 
 .product-card {
-  background: #fafafa;
+  border: 1px solid #eee;
   border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  padding: 1rem;
+  padding: 15px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.product-card:hover,
-.product-card:focus-within {
+.product-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 .product-card img {
-  width: 100%;
   height: 180px;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 1rem;
+  border-radius: 8px;
 }
 
 .product-card h3 {
-  margin: 0.4rem 0 0.6rem 0;
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: #222;
-}
-
-.product-card p {
-  flex-grow: 1;
-  color: #555;
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
-}
-
-/* ==========================
-   BUTTONS
-========================== */
-.add-to-cart,
-#whatsapp-order,
-#whatsapp-order-sticky {
-  background-color: #25d366;
-  border: none;
-  border-radius: 30px;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  font-family: 'Poppins', sans-serif;
-}
-
-.add-to-cart {
-  padding: 0.6rem 1.2rem;
-  box-shadow: 0 4px 9px rgba(37, 211, 102, 0.4);
-}
-
-.add-to-cart:hover,
-.add-to-cart:focus {
-  background-color: #1ebe57;
-  outline: none;
-  box-shadow: 0 5px 11px rgba(27, 171, 81, 0.7);
-}
-
-#whatsapp-order {
-  width: 100%;
-  padding: 0.9rem;
+  margin: 15px 0 5px;
   font-size: 1.1rem;
-  box-shadow: 0 5px 10px rgba(37, 211, 102, 0.4);
-  margin-top: 1rem;
 }
 
-#whatsapp-order:disabled {
-  background-color: #a5d6a7;
-  cursor: not-allowed;
-  box-shadow: none;
+.product-card .category {
+  font-size: 0.85rem;
+  color: #777;
 }
 
-#whatsapp-order:hover:not(:disabled),
-#whatsapp-order:focus:not(:disabled) {
-  background-color: #1ebe57;
-  outline: none;
-  box-shadow: 0 6px 12px rgba(27, 171, 81, 0.7);
+/* =========================
+   Quantity Control
+========================= */
+
+.qty-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
 }
 
-/* Sticky WhatsApp */
-#sticky-whatsapp-bar {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  z-index: 100;
+.qty-control button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  font-size: 18px;
 }
 
-#whatsapp-order-sticky {
-  padding: 0.85rem 1.5rem;
-  font-size: 1rem;
-  box-shadow: 0 5px 10px rgba(37, 211, 102, 0.5);
+.qty-control span {
+  min-width: 20px;
+  font-weight: 600;
 }
 
-#whatsapp-order-sticky:disabled {
-  background-color: #a5d6a7;
-  cursor: not-allowed;
-  box-shadow: none;
+/* =========================
+   Select Button
+========================= */
+
+.select-btn {
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  background: #f5f5f5;
 }
 
-#whatsapp-order-sticky:hover:not(:disabled),
-#whatsapp-order-sticky:focus:not(:disabled) {
-  background-color: #1ebe57;
-  outline: none;
-  box-shadow: 0 6px 12px rgba(27, 171, 81, 0.7);
+.select-btn:hover {
+  background: #eaeaea;
 }
 
-/* ==========================
-   ORDER SUMMARY
-========================== */
-.order-summary {
-  max-width: 600px;
-  margin: 0 auto 4rem auto;
-  background: #f9f9f9;
-  padding: 1.6rem 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
-}
+/* =========================
+   WhatsApp CTA
+========================= */
 
-.order-summary h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  color: #222;
-}
-
-#selected-items {
-  list-style: none;
-  padding-left: 1rem;
-  margin-bottom: 1rem;
-  color: #555;
-}
-
-#selected-items li {
-  padding: 0.25rem 0;
-}
-
-/* ==========================
-   ABOUT & CONTACT SECTIONS
-========================== */
-.about-section, .contact-section {
-  padding: 2rem 0;
-}
-
-.about-section h2, .contact-section h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.about-section p, .contact-section p {
-  margin-bottom: 1rem;
-  color: #555;
-}
-
-/* ==========================
-   FOOTER
-========================== */
-footer.site-footer {
+.whatsapp-cta {
+  background: #25d366;
+  color: #fff;
+  padding: 40px 0;
   text-align: center;
-  padding: 1rem 0;
-  color: #666;
-  font-size: 0.9rem;
-  font-family: 'Poppins', sans-serif;
-  margin-top: 4rem;
 }
 
-/* ==========================
-   RESPONSIVE
-========================== */
-@media (max-width: 600px) {
-  .page-hero {
-    height: 200px;
+.whatsapp-cta h2 {
+  font-size: 1.8rem;
+}
+
+.whatsapp-cta p {
+  margin: 10px 0 20px;
+}
+
+.whatsapp-btn {
+  background: #fff;
+  color: #25d366;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.whatsapp-btn:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   Footer
+========================= */
+
+.site-footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+  nav a {
+    margin-left: 12px;
   }
-  .page-hero h1 {
+
+  .page-hero img {
+    height: 220px;
+  }
+
+  .hero-text h1 {
     font-size: 1.8rem;
-  }
-  nav.main-nav a {
-    display: block;
-    margin: 0.5rem 0;
   }
 }
