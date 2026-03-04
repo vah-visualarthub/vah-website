@@ -8,42 +8,12 @@ const WHATSAPP_NUMBER = "9398287399";
 /* ================= PRODUCT DATA ================= */
 
 const products = [
-  {
-    id: 1,
-    name: "Photo Frame",
-    category: "Frames",
-    image: "assets/images/product-frames.jpg"
-  },
-  {
-    id: 2,
-    name: "Custom Mug",
-    category: "Mugs",
-    image: "assets/images/product-mugs.jpg"
-  },
-  {
-    id: 3,
-    name: "Printed T-Shirt",
-    category: "T-shirts",
-    image: "assets/images/product-tshirts.jpg"
-  },
-  {
-    id: 4,
-    name: "Photo Pillow",
-    category: "Pillows",
-    image: "assets/images/product-pillows.jpg"
-  },
-  {
-    id: 5,
-    name: "Custom Keychain",
-    category: "Keychains",
-    image: "assets/images/product-keychains.jpg"
-  },
-  {
-    id: 6,
-    name: "Magic Mirror",
-    category: "Magic Mirror",
-    image: "assets/images/product-magic-mirror.jpg"
-  }
+  { id: 1, name: "Photo Frame", category: "Frames", image: "assets/images/product-frames.jpg" },
+  { id: 2, name: "Custom Mug", category: "Mugs", image: "assets/images/product-mugs.jpg" },
+  { id: 3, name: "Printed T-Shirt", category: "T-shirts", image: "assets/images/product-tshirts.jpg" },
+  { id: 4, name: "Photo Pillow", category: "Pillows", image: "assets/images/product-pillows.jpg" },
+  { id: 5, name: "Custom Keychain", category: "Keychains", image: "assets/images/product-keychains.jpg" },
+  { id: 6, name: "Magic Mirror", category: "Magic Mirror", image: "assets/images/product-magic-mirror.jpg" }
 ];
 
 /* ================= STATE ================= */
@@ -91,11 +61,13 @@ function renderProducts(category = "All") {
 /* ================= FILTER ================= */
 
 function filterProducts(category) {
-  document
-    .querySelectorAll(".filter-btn")
-    .forEach(btn => btn.classList.remove("active"));
+  document.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.classList.remove("active");
+    if (btn.dataset.category === category) {
+      btn.classList.add("active");
+    }
+  });
 
-  event.target.classList.add("active");
   renderProducts(category);
 }
 
@@ -128,39 +100,49 @@ function sendToWhatsApp() {
     return;
   }
 
-  let message = "Hello VAH 👋%0A%0A";
-  message += "I am interested in the following products:%0A";
+  let message = "Hello VAH 👋\n\n";
+  message += "I am interested in the following products:\n";
 
   products.forEach(p => {
     if (selectedProducts[p.id]) {
-      message += `• ${p.name} – Qty: ${selectedProducts[p.id]}%0A`;
+      message += `• ${p.name} – Qty: ${selectedProducts[p.id]}\n`;
     }
   });
 
-  message += "%0APlease contact me for customization, pricing, and details.%0A";
-  message += "%0AThank you!";
+  message += "\nPlease contact me for customization, pricing, and details.\n";
+  message += "\nThank you!";
 
-  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+  const encodedMessage = encodeURIComponent(message);
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
   window.open(url, "_blank");
 }
 
-/* ================= INIT ================= */
-
-document.addEventListener("DOMContentLoaded", () => {
-  renderProducts();
-});
-
 /* ================= MOBILE MENU ================= */
 
-function toggleMenu() {
-  const nav = document.getElementById("main-nav");
-  nav.classList.toggle("active");
-}
+document.addEventListener("DOMContentLoaded", function () {
 
-// Close menu when link is clicked (mobile UX)
-document.addEventListener("click", function (e) {
-  if (e.target.closest("nav a")) {
-    const nav = document.getElementById("main-nav");
-    nav.classList.remove("active");
+  // Render products if on products page
+  renderProducts();
+
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.getElementById("main-nav");
+
+  if (hamburger && nav) {
+
+    hamburger.addEventListener("click", function () {
+      nav.classList.toggle("active");
+      hamburger.classList.toggle("open");
+    });
+
+    // Auto close when nav link clicked (better mobile UX)
+    document.querySelectorAll("#main-nav a").forEach(link => {
+      link.addEventListener("click", function () {
+        nav.classList.remove("active");
+        hamburger.classList.remove("open");
+      });
+    });
+
   }
+
 });
