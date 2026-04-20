@@ -24,28 +24,27 @@
 <header class="site-header">
   <div class="container nav-container">
 
-    <!-- Logo -->
     <a href="index.html" class="logo">
       <img src="assets/images/vah-logo.png" alt="VAH Logo">
       <div class="logo-text">
         <strong>Visual Art Hub</strong>
-        <span>Because Every Moment Matters</span>
+        <span>Where Your Emotions Take Shape</span>
       </div>
     </a>
 
-    <!-- Hamburger -->
     <div class="hamburger" onclick="toggleMenu()">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
-    <!-- Navigation -->
     <nav id="main-nav">
       <a href="index.html">Home</a>
       <a href="products.html" class="active">Products</a>
+      <a href="occasions.html">Occasions</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
+      <a href="https://wa.me/919398287399" class="order-btn">Order Now</a>
     </nav>
 
   </div>
@@ -60,7 +59,7 @@
     <h1>Explore Our Products</h1>
     <p>
       Pick what you love, customise it your way,<br>
-      and talk to us directly on WhatsApp
+      and order directly on WhatsApp
     </p>
   </div>
 </section>
@@ -69,9 +68,8 @@
 <section class="section">
   <div class="container narrow text-center">
     <p>
-      Our products are designed to turn your photos, emotions, and ideas
-      into meaningful personalised gifts. Select the items you’re interested in,
-      choose quantities, and send us your requirement — we’ll handle the rest.
+      Our products turn your photos, emotions, and ideas into meaningful personalised gifts.
+      Choose what you like and we’ll help you customize it perfectly.
     </p>
   </div>
 </section>
@@ -80,37 +78,11 @@
 <section class="filters-section">
   <div class="container filters">
 
-    <button
-      class="filter-btn active"
-      data-category="All"
-      onclick="filterProducts('All')"
-    >
-      All
-    </button>
-
-    <button class="filter-btn" data-category="Frames" onclick="filterProducts('Frames')">
-      Frames
-    </button>
-
-    <button class="filter-btn" data-category="Mugs" onclick="filterProducts('Mugs')">
-      Mugs
-    </button>
-
-    <button class="filter-btn" data-category="T-shirts" onclick="filterProducts('T-shirts')">
-      T-Shirts
-    </button>
-
-    <button class="filter-btn" data-category="Keychains" onclick="filterProducts('Keychains')">
-      Keychains
-    </button>
-
-    <button class="filter-btn" data-category="Magic Mirror" onclick="filterProducts('Magic Mirror')">
-      Magic Mirror
-    </button>
-
-    <button class="filter-btn" data-category="Pillows" onclick="filterProducts('Pillows')">
-      Pillows
-    </button>
+    <button class="filter-btn active" onclick="filterProducts('All')">All</button>
+    <button class="filter-btn" onclick="filterProducts('Frames')">Frames</button>
+    <button class="filter-btn" onclick="filterProducts('Mugs')">Mugs</button>
+    <button class="filter-btn" onclick="filterProducts('T-Shirts')">T-Shirts</button>
+    <button class="filter-btn" onclick="filterProducts('Keychains')">Keychains</button>
 
   </div>
 </section>
@@ -119,7 +91,7 @@
 <section class="products-section">
   <div class="container">
     <div id="products-container" class="products-grid">
-      <!-- Products injected by main.js -->
+      <!-- Dynamic products will load here -->
     </div>
   </div>
 </section>
@@ -131,33 +103,11 @@
     <h2 class="section-title">How Ordering Works</h2>
 
     <p>
-      1. Browse and select the products you like<br>
-      2. Choose quantities for each item<br>
-      3. Send your selection directly on WhatsApp<br>
-      4. We’ll discuss customisation, pricing, and delivery personally
+      1. Browse and select a product<br>
+      2. Click on View Details<br>
+      3. Send your requirement on WhatsApp<br>
+      4. We customise and deliver your order
     </p>
-
-    <p>
-      This helps us give you better attention and create something
-      that truly matches your expectations.
-    </p>
-
-  </div>
-</section>
-
-<!-- ================= WHATSAPP CTA ================= -->
-<section class="whatsapp-cta">
-  <div class="container text-center">
-
-    <h2>Selected your favourites?</h2>
-    <p>Send your list to us and let’s create something meaningful</p>
-
-    <button
-      onclick="sendToWhatsApp()"
-      class="whatsapp-btn"
-    >
-      <i class="fab fa-whatsapp"></i> Send Selection on WhatsApp
-    </button>
 
   </div>
 </section>
@@ -166,16 +116,16 @@
 <footer class="site-footer">
   <div class="container text-center">
     <p>
-      © 2026 VAH – Visual Art Hub · Because Every Moment Matters<br>
+      © 2026 VAH – Visual Art Hub<br>
       <span class="footer-sub">
-        by Madhu Photo Studio, Sadasivpet
+        Where Your Emotions Take Shape
       </span>
     </p>
   </div>
 </footer>
 
 <!-- ================= JS ================= -->
-<script src="assets/js/main.js"></script>
+<script src="assets/js/products.js"></script>
 
 </body>
 </html>
