@@ -5,7 +5,7 @@
     "category": "Mugs",
     "occasion": ["Birthday", "Love", "Friendship", "Farewell"],
     "price": "₹299",
-    "image": "assets/images/products/mugs/mug1.jpg",
+    "image": "https://raw.githubusercontent.com/vah-visualarthub/vah-website/main/assets/images/products/mugs/mug1.jpg",
     "description": "Personalized photo mug perfect for all occasions."
   },
   {
@@ -14,7 +14,7 @@
     "category": "Keychains",
     "occasion": ["Love", "Friendship"],
     "price": "₹99",
-    "image": "assets/images/products/keychains/keychain1.jpg",
+    "image": "https://raw.githubusercontent.com/vah-visualarthub/vah-website/main/assets/images/products/keychains/keychain1.jpg",
     "description": "Custom acrylic keychain with your favorite design."
   },
   {
@@ -23,7 +23,7 @@
     "category": "Frames",
     "occasion": ["Friendship", "Love", "Family"],
     "price": "₹599",
-    "image": "assets/images/products/frames/frame1.jpg",
+    "image": "https://raw.githubusercontent.com/vah-visualarthub/vah-website/main/assets/images/products/frames/frame1.jpg",
     "description": "Beautiful photo frame to preserve your memories."
   },
   {
@@ -32,7 +32,7 @@
     "category": "T-Shirts",
     "occasion": ["Farewell", "Friends", "College"],
     "price": "₹299",
-    "image": "assets/images/products/tshirts/tshirt1.jpg",
+    "image": "https://raw.githubusercontent.com/vah-visualarthub/vah-website/main/assets/images/products/tshirts/tshirt1.jpg",
     "description": "Printed t-shirt customized with your design."
   }
 ]
