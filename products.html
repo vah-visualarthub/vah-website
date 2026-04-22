@@ -40,8 +40,8 @@
 
     <nav id="main-nav">
       <a href="index.html">Home</a>
-      <a href="products.html" class="active">Products</a>
       <a href="occasions.html">Occasions</a>
+      <a href="products.html" class="active">Products</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
       <a href="https://wa.me/919398287399" class="order-btn">Order Now</a>
@@ -58,18 +58,7 @@
   <div class="hero-content">
     <h1>Explore Our Products</h1>
     <p>
-      Pick what you love, customise it your way,<br>
-      and order directly on WhatsApp
-    </p>
-  </div>
-</section>
-
-<!-- ================= INTRO ================= -->
-<section class="section">
-  <div class="container narrow text-center">
-    <p>
-      Our products turn your photos, emotions, and ideas into meaningful personalised gifts.
-      Choose what you like and we’ll help you customize it perfectly.
+      Choose your product, customise it, and make it meaningful
     </p>
   </div>
 </section>
@@ -78,11 +67,11 @@
 <section class="filters-section">
   <div class="container filters">
 
-    <button class="filter-btn active" onclick="filterProducts('All')">All</button>
-    <button class="filter-btn" onclick="filterProducts('Frames')">Frames</button>
-    <button class="filter-btn" onclick="filterProducts('Mugs')">Mugs</button>
-    <button class="filter-btn" onclick="filterProducts('T-Shirts')">T-Shirts</button>
-    <button class="filter-btn" onclick="filterProducts('Keychains')">Keychains</button>
+    <button class="filter-btn active" onclick="filterProducts('All', this)">All</button>
+    <button class="filter-btn" onclick="filterProducts('Frames', this)">Frames</button>
+    <button class="filter-btn" onclick="filterProducts('Mugs', this)">Mugs</button>
+    <button class="filter-btn" onclick="filterProducts('T-Shirts', this)">T-Shirts</button>
+    <button class="filter-btn" onclick="filterProducts('Keychains', this)">Keychains</button>
 
   </div>
 </section>
@@ -90,24 +79,33 @@
 <!-- ================= PRODUCTS GRID ================= -->
 <section class="products-section">
   <div class="container">
-    <div id="products-container" class="products-grid">
-      <!-- Dynamic products will load here -->
-    </div>
+    <div id="products-container" class="products-grid"></div>
   </div>
 </section>
 
-<!-- ================= HOW IT WORKS ================= -->
-<section class="section section-light">
-  <div class="container narrow text-center">
+<!-- ================= EMPTY STATE ================= -->
+<section id="no-products" class="section text-center" style="display:none;">
+  <div class="container narrow">
+    <h2>No products found</h2>
+    <p>Try selecting a different category</p>
+    <button onclick="filterProducts('All')" class="primary-btn">Show All Products</button>
+  </div>
+</section>
 
-    <h2 class="section-title">How Ordering Works</h2>
+<!-- ================= CTA ================= -->
+<section class="whatsapp-cta">
+  <div class="container text-center">
 
-    <p>
-      1. Browse and select a product<br>
-      2. Click on View Details<br>
-      3. Send your requirement on WhatsApp<br>
-      4. We customise and deliver your order
-    </p>
+    <h2>Not sure what to choose?</h2>
+    <p>Tell us your requirement and we’ll suggest the best option</p>
+
+    <a
+      href="https://wa.me/919398287399"
+      target="_blank"
+      class="whatsapp-btn"
+    >
+      <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+    </a>
 
   </div>
 </section>
@@ -125,6 +123,7 @@
 </footer>
 
 <!-- ================= JS ================= -->
+<script src="assets/js/main.js"></script>
 <script src="assets/js/products.js"></script>
 
 </body>
