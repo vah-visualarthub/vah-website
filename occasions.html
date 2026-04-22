@@ -5,41 +5,107 @@
   <title>Occasions | VAH – Visual Art Hub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 
 <body>
 
+<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container nav-container">
+
     <a href="index.html" class="logo">
-      <img src="assets/images/vah-logo.png">
+      <img src="assets/images/vah-logo.png" alt="VAH Logo">
       <div class="logo-text">
         <strong>Visual Art Hub</strong>
         <span>Where Your Emotions Take Shape</span>
       </div>
     </a>
 
-    <nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="main-nav">
       <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
       <a href="occasions.html" class="active">Occasions</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
+      <a href="https://wa.me/919398287399" class="order-btn">Order Now</a>
     </nav>
+
   </div>
 </header>
 
-<section class="section text-center">
-  <h1 id="occasion-title">Occasion</h1>
+<!-- ================= HERO ================= -->
+<section class="page-hero">
+  <img src="assets/images/Products Page.png" alt="Occasions VAH">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1 id="occasion-title">Occasion</h1>
+    <p>Find the perfect personalised gift for this moment</p>
+  </div>
 </section>
 
+<!-- ================= PRODUCTS ================= -->
 <section class="products-section">
   <div class="container">
     <div id="occasion-products" class="products-grid"></div>
   </div>
 </section>
 
+<!-- ================= EMPTY STATE ================= -->
+<section id="no-products" class="section text-center" style="display:none;">
+  <div class="container narrow">
+    <h2>No products found</h2>
+    <p>We’re adding more products for this occasion soon.</p>
+    <a href="products.html" class="primary-btn">Explore All Products</a>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="whatsapp-cta">
+  <div class="container text-center">
+
+    <h2>Didn’t find what you’re looking for?</h2>
+    <p>Tell us your idea — we can customise it for you</p>
+
+    <a
+      href="https://wa.me/919398287399"
+      target="_blank"
+      class="whatsapp-btn"
+    >
+      <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+    </a>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container text-center">
+    <p>
+      © 2026 VAH – Visual Art Hub<br>
+      <span class="footer-sub">
+        Where Your Emotions Take Shape
+      </span>
+    </p>
+  </div>
+</footer>
+
+<!-- ================= JS ================= -->
+<script src="assets/js/main.js"></script>
 <script src="assets/js/occasions.js"></script>
 
 </body>
