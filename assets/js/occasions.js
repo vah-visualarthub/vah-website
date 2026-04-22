@@ -12,16 +12,17 @@ fetch('data/products.json')
     );
 
     const container = document.getElementById('occasion-products');
+    const emptySection = document.getElementById('no-products');
 
     if (filtered.length === 0) {
-      container.innerHTML = "<p>No products found</p>";
+      emptySection.style.display = "block";
       return;
     }
 
     filtered.forEach(product => {
       const card = `
         <div class="product-card" onclick="goToProduct(${product.id})">
-          <img src="${product.image}">
+          <img src="${product.image}" alt="${product.name}">
           <h3>${product.name}</h3>
           <p>${product.price}</p>
         </div>
