@@ -329,3 +329,152 @@ button:hover,
     display: flex;
   }
 }
+
+/* ================= PREMIUM UPGRADES ================= */
+
+/* Fix Hero Content (IMPORTANT) */
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  padding-left: 8%;
+}
+
+.hero-content h1 {
+  font-size: 2.6rem;
+  max-width: 600px;
+}
+
+.hero-content p {
+  margin-top: 12px;
+  font-size: 1.1rem;
+}
+
+/* Section spacing */
+.section {
+  padding: 60px 0;
+}
+
+.section-light {
+  background: #fafafa;
+}
+
+.section-title {
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.narrow {
+  max-width: 700px;
+  margin: auto;
+}
+
+/* PRIMARY BUTTON */
+.primary-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: #E76F51;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+/* ORDER BUTTON (HEADER) */
+.order-btn {
+  background: #E76F51;
+  color: #fff !important;
+  padding: 8px 18px;
+  border-radius: 20px;
+  margin-left: 20px;
+}
+
+.order-btn:hover {
+  background: #d65a3c;
+}
+
+/* PRODUCT CARD IMPROVEMENT */
+.product-card {
+  cursor: pointer;
+}
+
+.product-card h3 {
+  padding: 12px 16px 6px;
+}
+
+.product-card p {
+  padding-bottom: 16px;
+  font-weight: 600;
+  color: #E76F51;
+}
+
+/* PRODUCT DETAIL PAGE */
+.product-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.product-detail-grid img {
+  border-radius: 16px;
+}
+
+.product-info h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.product-info .price {
+  color: #E76F51;
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+}
+
+.product-info .desc {
+  margin-bottom: 20px;
+}
+
+/* FEATURE LIST */
+.feature-list {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.feature-list li {
+  margin-bottom: 8px;
+}
+
+/* EMPTY STATE */
+#no-products h2 {
+  margin-bottom: 10px;
+}
+
+/* ================= RESPONSIVE IMPROVEMENTS ================= */
+
+@media (max-width: 768px) {
+
+  .hero-content {
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .product-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
