@@ -1,6 +1,10 @@
 const params = new URLSearchParams(window.location.search);
 const productId = params.get('id');
 
+const container = document.getElementById('product-detail');
+const errorSection = document.getElementById('product-error');
+const whatsappBtn = document.getElementById('whatsapp-order');
+
 fetch('data/products.json')
   .then(res => res.json())
   .then(data => {
@@ -8,11 +12,10 @@ fetch('data/products.json')
     const product = data.find(p => p.id == productId);
 
     if (!product) {
-      document.getElementById('product-detail').innerHTML = "<p>Product not found</p>";
+      container.style.display = "none";
+      errorSection.style.display = "block";
       return;
     }
-
-    const container = document.getElementById('product-detail');
 
     container.innerHTML = `
       <div class="product-image">
@@ -23,18 +26,24 @@ fetch('data/products.json')
         <h1>${product.name}</h1>
         <p class="price">${product.price}</p>
 
-        <p class="description">${product.description}</p>
+        <p class="desc">
+          This is a fully customizable product. You can add your photo,
+          text, or design based on your requirement.
+        </p>
 
-        <ul class="product-features">
-          <li>✔ Fully customizable design</li>
-          <li>✔ Premium quality finish</li>
+        <ul class="feature-list">
+          <li>✔ High-quality print</li>
+          <li>✔ Personalised design</li>
           <li>✔ Perfect for gifting</li>
         </ul>
       </div>
     `;
 
-    // WhatsApp link
-    const whatsappBtn = document.getElementById('whatsapp-order');
+    // WhatsApp Message
+    const message = `Hi VAH, I want to order this product:\n\n${product.name}\nPrice: ${product.price}`;
+    const encoded = encodeURIComponent(message);
 
-    whatsappBtn.href = `https://wa.me/919398287399?text=Hi, I want to order ${product.name}`;
+    whatsappBtn.href = `https://wa.me/919398287399?text=${encoded}`;
+    whatsappBtn.target = "_blank";
+
   });
