@@ -37,8 +37,8 @@
 
     <nav id="main-nav">
       <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
       <a href="occasions.html">Occasions</a>
+      <a href="products.html">Products</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
       <a href="https://wa.me/919398287399" class="order-btn">Order Now</a>
@@ -52,8 +52,24 @@
   <div class="container">
 
     <div id="product-detail" class="product-detail-grid">
-      <!-- Dynamic content will load here -->
+      <p>Loading product...</p>
     </div>
+
+  </div>
+</section>
+
+<!-- ================= TRUST ================= -->
+<section class="section section-light">
+  <div class="container narrow text-center">
+
+    <h2 class="section-title">Why Order from VAH?</h2>
+
+    <p>
+      ✔ Personalised design support<br>
+      ✔ Direct WhatsApp communication<br>
+      ✔ Quality print & finishing<br>
+      ✔ Budget-friendly pricing
+    </p>
 
   </div>
 </section>
@@ -63,12 +79,21 @@
   <div class="container text-center">
 
     <h2>Ready to customize this product?</h2>
-    <p>Send your idea or photo and we’ll create something special for you</p>
+    <p>Send your photo, idea, or text — we’ll handle the rest</p>
 
     <a id="whatsapp-order" class="whatsapp-btn">
       <i class="fab fa-whatsapp"></i> Order on WhatsApp
     </a>
 
+  </div>
+</section>
+
+<!-- ================= ERROR ================= -->
+<section id="product-error" class="section text-center" style="display:none;">
+  <div class="container narrow">
+    <h2>Product not found</h2>
+    <p>Please go back and select a valid product</p>
+    <a href="products.html" class="primary-btn">Go to Products</a>
   </div>
 </section>
 
@@ -85,6 +110,7 @@
 </footer>
 
 <!-- ================= JS ================= -->
+<script src="assets/js/main.js"></script>
 <script src="assets/js/product-detail.js"></script>
 
 </body>
