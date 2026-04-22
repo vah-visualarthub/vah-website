@@ -3,36 +3,48 @@
     "id": 1,
     "name": "Custom Mug",
     "category": "Mugs",
+    "slug": "custom-mug",
     "occasion": ["Birthday", "Love", "Friendship", "Farewell"],
     "price": "₹299",
-    "image": "https://raw.githubusercontent.com/vah-visualarthub/vah-website/main/assets/images/products/mugs/mug1.jpg",
+    "images": [
+      "https://raw.githubusercontent.com/vah-visualarthub/vah-website/main/assets/images/products/mugs/mug1.jpg"
+    ],
     "description": "Personalized photo mug perfect for all occasions."
   },
   {
     "id": 2,
     "name": "Acrylic Keychain",
     "category": "Keychains",
+    "slug": "acrylic-keychain",
     "occasion": ["Love", "Friendship"],
     "price": "₹99",
-    "image": "https://raw.githubusercontent.com/vah-visualarthub/vah-website/main/assets/images/products/keychains/keychain1.jpg",
+    "images": [
+      "https://raw.githubusercontent.com/vah-visualarthub/vah-website/main/assets/images/products/keychains/keychain1.jpg"
+    ],
     "description": "Custom acrylic keychain with your favorite design."
   },
   {
     "id": 3,
     "name": "Photo Frame",
     "category": "Frames",
+    "slug": "photo-frame",
     "occasion": ["Friendship", "Love", "Family"],
     "price": "₹599",
-    "image": "https://raw.githubusercontent.com/vah-visualarthub/vah-website/main/assets/images/products/frames/frame1.jpg",
+    "images": [
+      "https://raw.githubusercontent.com/vah-visualarthub/vah-website/main/assets/images/products/frames/frame1.jpg"
+    ],
     "description": "Beautiful photo frame to preserve your memories."
   },
   {
     "id": 4,
     "name": "Custom T-Shirt",
     "category": "T-Shirts",
-    "occasion": ["Farewell", "Friends", "College"],
+    "slug": "custom-tshirt",
+    "occasion": ["Farewell", "Friendship", "College"],
     "price": "₹299",
-    "image": "https://raw.githubusercontent.com/vah-visualarthub/vah-website/main/assets/images/products/tshirts/tshirt1.jpg",
+    "images": [
+      "https://raw.githubusercontent.com/vah-visualarthub/vah-website/main/assets/images/products/tshirts/tshirt1.jpg"
+    ],
     "description": "Printed t-shirt customized with your design."
   }
 ]
