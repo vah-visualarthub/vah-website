@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>VAH – Visual Art Hub | Because Every Moment Matters</title>
+  <title>VAH – Visual Art Hub | Where Your Emotions Take Shape</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Google Font -->
@@ -24,28 +24,27 @@
 <header class="site-header">
   <div class="container nav-container">
 
-    <!-- Logo -->
     <a href="index.html" class="logo">
       <img src="assets/images/vah-logo.png" alt="VAH Logo">
       <div class="logo-text">
         <strong>Visual Art Hub</strong>
-        <span>Because Every Moment Matters</span>
+        <span>Where Your Emotions Take Shape</span>
       </div>
     </a>
 
-    <!-- Hamburger -->
     <div class="hamburger" onclick="toggleMenu()">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
-    <!-- Navigation -->
     <nav id="main-nav">
       <a href="index.html" class="active">Home</a>
+      <a href="occasions.html">Occasions</a>
       <a href="products.html">Products</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
+      <a href="https://wa.me/919398287399" class="order-btn">Order Now</a>
     </nav>
 
   </div>
@@ -57,83 +56,80 @@
   <div class="hero-overlay"></div>
 
   <div class="hero-content hero-left">
-    <h1>Personalised Gifts Made with Love</h1>
+    <h1>Personalised Gifts Made with Emotion</h1>
 
     <p>
-      Turning photos, emotions, and memories into something you can hold —
+      Turning your photos and memories into meaningful gifts —
       <span class="highlight-text">
-        because every moment matters.
+        crafted just for you.
       </span>
     </p>
 
-    <a href="products.html" class="primary-btn">
-      Explore Our Products
+    <a href="occasions.html" class="primary-btn">
+      Shop by Occasion
     </a>
   </div>
 </section>
 
-<!-- ================= INTRO ================= -->
-<section class="section">
-  <div class="container narrow text-center">
+<!-- ================= OCCASIONS ================= -->
+<section class="section section-light">
+  <div class="container">
 
-    <h2 class="section-title">
-      Welcome to VAH – Visual Art Hub
-    </h2>
+    <h2 class="section-title text-center">Shop by Occasion</h2>
 
-    <p>
-      Visual Art Hub (VAH) is the creative extension of a family legacy that
-      began in 1985 with Madhu Photo Studio. Built on decades of trust,
-      experience, and love for photographs, VAH brings a fresh approach
-      to personalised gifting and creative printing.
-    </p>
+    <div class="products-grid">
 
-    <p>
-      While our roots remain deeply connected to traditional studio photography,
-      VAH focuses on transforming your moments into meaningful customised gifts
-      — crafted personally, not mass produced.
-    </p>
+      <div class="product-card" onclick="goToOccasion('Birthday')">
+        <h3>🎂 Birthday</h3>
+      </div>
+
+      <div class="product-card" onclick="goToOccasion('Love')">
+        <h3>❤️ Love</h3>
+      </div>
+
+      <div class="product-card" onclick="goToOccasion('Anniversary')">
+        <h3>💍 Anniversary</h3>
+      </div>
+
+      <div class="product-card" onclick="goToOccasion('Friendship')">
+        <h3>🤝 Friendship</h3>
+      </div>
+
+      <div class="product-card" onclick="goToOccasion('Farewell')">
+        <h3>🎓 Farewell</h3>
+      </div>
+
+    </div>
 
   </div>
 </section>
 
-<!-- ================= OFFERINGS ================= -->
-<section class="section section-light">
+<!-- ================= PRODUCTS ================= -->
+<section class="section">
   <div class="container">
 
-    <h2 class="section-title text-center">
-      Crafted for Love, Fun & Celebration
-    </h2>
+    <h2 class="section-title text-center">Our Products</h2>
 
     <div class="products-grid">
 
-      <div class="product-card">
-        <img src="assets/images/product-frames.jpg" alt="Photo Frames">
-        <h3>Photo Frames</h3>
-      </div>
-
-      <div class="product-card">
-        <img src="assets/images/product-mugs.jpg" alt="Custom Mugs">
+      <div class="product-card" onclick="goToCategory('Mugs')">
+        <img src="assets/images/product-mugs.jpg">
         <h3>Custom Mugs</h3>
       </div>
 
-      <div class="product-card">
-        <img src="assets/images/product-tshirts.jpg" alt="T-Shirts">
-        <h3>Printed T-Shirts</h3>
+      <div class="product-card" onclick="goToCategory('Keychains')">
+        <img src="assets/images/product-keychains.jpg">
+        <h3>Keychains</h3>
       </div>
 
-      <div class="product-card">
-        <img src="assets/images/product-pillows.jpg" alt="Photo Pillows">
-        <h3>Photo Pillows</h3>
+      <div class="product-card" onclick="goToCategory('Frames')">
+        <img src="assets/images/product-frames.jpg">
+        <h3>Photo Frames</h3>
       </div>
 
-      <div class="product-card">
-        <img src="assets/images/product-keychains.jpg" alt="Keychains">
-        <h3>Custom Keychains</h3>
-      </div>
-
-      <div class="product-card">
-        <img src="assets/images/product-magic-mirror.jpg" alt="Magic Mirror">
-        <h3>Magic Mirror</h3>
+      <div class="product-card" onclick="goToCategory('T-Shirts')">
+        <img src="assets/images/product-tshirts.jpg">
+        <h3>T-Shirts</h3>
       </div>
 
     </div>
@@ -142,20 +138,18 @@
 </section>
 
 <!-- ================= WHY VAH ================= -->
-<section class="section">
+<section class="section section-light">
   <div class="container narrow text-center">
 
-    <h2 class="section-title">Why Visual Art Hub?</h2>
+    <h2 class="section-title">Why Choose VAH?</h2>
 
     <p>
-      Every order at VAH is handled personally. We discuss your requirement,
-      understand your vision, and craft each product with care — just like
-      our family has done for decades in studio photography.
+      Every order is handled personally with attention to detail.
+      We don’t just print — we create something meaningful for you.
     </p>
 
     <p>
-      This is why we follow a WhatsApp-first approach — so communication is
-      clear, fast, and human.
+      Premium quality. Budget-friendly pricing. Fast communication.
     </p>
 
   </div>
@@ -165,15 +159,15 @@
 <section class="whatsapp-cta">
   <div class="container text-center">
 
-    <h2>Have a moment worth preserving?</h2>
-    <p>Select a product and talk to us directly on WhatsApp</p>
+    <h2>Have an idea? Let’s make it real.</h2>
+    <p>Message us directly and we’ll help you create the perfect gift</p>
 
     <a
-      href="https://wa.me/9398287399"
+      href="https://wa.me/919398287399"
       target="_blank"
       class="whatsapp-btn"
     >
-      <i class="fab fa-whatsapp"></i> Start on WhatsApp
+      <i class="fab fa-whatsapp"></i> Chat on WhatsApp
     </a>
 
   </div>
@@ -183,9 +177,9 @@
 <footer class="site-footer">
   <div class="container text-center">
     <p>
-      © 2026 VAH – Visual Art Hub · Because Every Moment Matters<br>
+      © 2026 VAH – Visual Art Hub<br>
       <span class="footer-sub">
-        by Madhu Photo Studio, Sadasivpet
+        Where Your Emotions Take Shape
       </span>
     </p>
   </div>
@@ -193,6 +187,16 @@
 
 <!-- ================= JS ================= -->
 <script src="assets/js/main.js"></script>
+
+<script>
+function goToOccasion(type) {
+  window.location.href = `occasions.html?type=${type}`;
+}
+
+function goToCategory(category) {
+  window.location.href = `products.html`;
+}
+</script>
 
 </body>
 </html>
